@@ -1,0 +1,187 @@
+body, html {
+	min-height: 100vh;
+	box-sizing: border-box;
+	background-color pink;
+
+}
+
+.wrapper {
+	border 1px solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height:  100vh;
+	margin: 0 auto;
+	background-color: white;
+}
+
+.main {
+	border 1px solid pink;
+	margin-bottom: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content space-around;
+	align-items: center;
+	flex: 1;
+}
+
+.question p, .question h2, .answer h2, .answer p {
+	text-align: center;
+}
+
+
+/* ====================== Question ================================*/
+.question {
+	border: 1px solid blue;
+	border-radius: 20px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+textarea {
+	vertical-align: middle;
+}
+
+select {
+	margin-top: .7rem;
+}
+
+.question h2 {
+	margin-bottom: 5px;
+}
+
+#translate {
+	width: 77px;
+	margin: 10px auto 19.2px auto;
+	padding: .5rem;
+	border: 1px solid purple;
+	background-color: #f4f4f4;
+	border-radius: 10px;
+	outline: none;
+}
+
+#translate:hover {
+	background-color: #ffb3ff;
+	outline: none;
+}
+
+/*========================== Answer =================================*/
+
+.answer {
+	padding: 0 1rem 0 1rem;
+	overflow: hidden;
+	border: 1px solid goldenrod;
+	border-radius: 10px;
+	width: 80%;
+	margin: 1rem auto 1.2rem auto;
+	display: flex;
+	flex-direction: column;
+	opacity: 0;
+	transition: opacity 2s ease;
+}
+
+.fadein {
+	opacity: 1;
+}
+
+#result {
+	margin-top: 1rem;
+	display: inline-block;
+	padding: .5rem;
+	border: 2px solid purple;
+}
+
+/* =================== Airplane and Banner ============================*/
+
+.airplane {
+	font-size: 2.4rem;
+	display: inline-block;
+	font-family: 'Zapf Dingbats';
+	position: relative;
+	transform: translate(0, 9.5px); 
+}
+
+.banner {
+	transform: translate(-380px, 0px);
+	visibility: hidden;
+}
+
+.animated {
+	animation: fly 10s linear .2s 1;
+	animation-fill-mode: forwards;
+	visibility: visible;
+}
+
+@keyframes fly {
+	from{ transform: translate(-380px, 0px); }
+	to{ transform: translate(400px, 0px); }
+}
+
+
+/* ========================== Globe ================================*/
+
+.globe {
+	border 1px solid green;
+	width: 200px;
+}
+
+.globe img {
+	display: block;	
+	max-width: 100%;
+}
+/* ============================= Footer =================================*/
+
+footer {
+	border 1px solid green;
+	margin: 0 auto;
+	width: 50%;
+	text-align: center;
+}
+
+
+/* ==================== Media Queries ===============================*/
+
+@media all and (min-width: 768px){
+	.wrapper {
+		width: 50%;
+	}
+
+	.question {
+		width: 80%;
+	}
+
+	.answer {
+		width: 60%;
+	}
+
+	.banner {
+		transform: translate(-292px, 0px);
+	}
+
+	@keyframes fly {
+		from{ transform: translate(-292px, 0px); }
+		to{ transform: translate(290px, 0px); }
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
