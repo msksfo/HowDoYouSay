@@ -8,14 +8,17 @@
 		<!-- font awesome icons -->
 		<script src="https://use.fontawesome.com/4047a077a3.js"></script>
 
-		<link type='text/css' rel='stylesheet' href='css/styles.css'>
+		<!-- animate css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+		<link type='text/css' rel='stylesheet' href='css/styles2.css'>
 	</head>
 	<body>
 		<div class='wrapper'>
 			<div class='main'>
-				<div class='question'>
+				<div class='question animated bounceInDown'>
 					<h2>Question</h2>
-					<p>How do you say <textarea id='textquery' placeholder='text to be translated'></textarea> in <select id='languageoptions'>
+					<p>How do you say <textarea id='textquery' required placeholder='text to be translated'></textarea> in <select id='languageoptions'>
 						<option selected disabled>Choose language</option>
 						<option value='am'>Amharic</option>
 						<option value='ar'>Arabic</option>
@@ -55,17 +58,28 @@
 					<button type='submit' id='translate'>Translate</button>
 				</div>
 
+				<div class='alert'>Oops. Something went wrong. It's me, not you. &#128522; Please try again later.</div>
+
 				<div class='answer'>
 					<h2>Answer</h2>
 					<p class='hidden'>Your translated text is as follows: <span id='result'></span>. </p>
 
 					<p class='banner'>Safe trip------------<span class='airplane'>&#x2708</span></p>
 				</div>
-			</div>
 
-			<footer>
-				<p>Powered by <a href='http://translate.yandex.com/' target='_blank'>Yandex</a>. Translate</p>
-			</footer>
+			</div> <!-- closes div .main -->
+
+			<div class='footer-container'>
+
+				<div></div>
+				<div class='globe'></div>
+				<div></div>
+
+				<footer>
+					<p>Powered by <a href='http://translate.yandex.com/' target='_blank'>Yandex</a>. Translate</p>
+				</footer>
+
+			</div>
 
 		</div> <!-- closes the wrapper div -->
 
