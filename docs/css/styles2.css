@@ -9,7 +9,6 @@
 		margin: 0 auto;
 		width: 50%;
 		max-width: 640px;
-		border: 1px solid #ea8d9d;
 	}
 
 	.main {
@@ -52,7 +51,6 @@ body, html {
 }
 
 .wrapper {
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
