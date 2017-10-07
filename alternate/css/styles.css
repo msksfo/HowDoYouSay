@@ -166,6 +166,7 @@ footer {
 
 	.wrapper {
 		width: 50%;
+		max-width: 640px;
 		border: 1px solid #ea8d9d;
 	}
 
