@@ -161,7 +161,7 @@ select {
 }
 
 .banner {
-	transform: translate(-380px, 0px);
+	transform: translate(-390px, 0px);
 	visibility: hidden;
 }
 
@@ -172,7 +172,7 @@ select {
 }
 
 @keyframes fly {
-	from{ transform: translate(-380px, 0px); }
+	from{ transform: translate(-390px, 0px); }
 	to{ transform: translate(400px, 0px); }
 }
 
