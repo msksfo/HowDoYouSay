@@ -195,7 +195,7 @@ select {
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
-	background: url('../images/BigGlobe2copy.png') 0 0 repeat;
+	background: url('../images/rotatingglobe.png') 0 0 repeat;
 	background-size: 420px;
 	animation-name: rotate;
 	animation-duration: 30s;
