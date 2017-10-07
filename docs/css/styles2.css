@@ -1,0 +1,260 @@
+@media all and (min-width: 768px){
+	body {
+		background: url('../images/background-pattern.png');
+	}
+
+	.wrapper {
+		border: 1px solid #ea8d9d;
+		padding: 1rem;
+		margin: 0 auto;
+		width: 50%;
+		border: 1px solid #ea8d9d;
+	}
+
+	.main {
+		margin-bottom: 0;
+	}
+
+	.question {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.answer {
+		width: 60%;
+		margin-bottom: 0;
+	}
+
+	.banner {
+		transform: translate(-292px, 0px);
+	}
+
+	@keyframes fly {
+		from{ transform: translate(-292px, 0px); }
+		to{ transform: translate(290px, 0px); }
+	}
+
+	.footer-container {
+		padding-top: 0;
+		margin: 0 auto;
+		margin-top: -40px;
+		width: 50%;
+	}
+
+}
+ 
+/* =================================================================*/
+
+body, html {
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height:  100vh;
+	background-color: white;
+}
+
+.main {
+	margin-bottom: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.question p, .question h2, .answer h2, .answer p {
+	text-align: center;
+}
+
+
+/* ====================== Question ================================*/
+.question {
+	border: 1px solid blue;
+	border-radius: 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.animated {
+	animation-delay: .6s;
+}
+
+textarea {
+	vertical-align: middle;
+}
+
+select {
+	margin-top: .7rem;
+}
+
+.question h2 {
+	margin-bottom: 5px;
+}
+
+#translate {
+	width: 77px;
+	margin: 10px auto 19.2px auto;
+	padding: .5rem;
+	border: 1px solid purple;
+	background-color: #f4f4f4;
+	border-radius: 10px;
+	outline: none;
+}
+
+#translate:hover {
+	background-color: #ffb3ff;
+	outline: none;
+}
+
+/* ============================== Error ===============================*/
+
+.alert {
+	text-align: center;
+	border-radius: 10px;
+	margin-top: 1.5rem;
+	padding: 10px;
+	background-color: #9f1d34;
+	color: white;
+	margin-bottom: 10px;
+	display: none;
+}
+
+/*========================== Answer =================================*/
+
+.answer {
+	padding: 0 1rem 0 1rem;
+	overflow: hidden;
+	border: 1px solid goldenrod;
+	border-radius: 10px;
+	width: 80%;
+	margin: 1rem auto 1rem auto;
+	display: flex;
+	flex-direction: column;
+	opacity: 0;
+	transition: opacity 2s ease;
+}
+
+.fadein {
+	opacity: 1;
+}
+
+#result {
+	margin-top: 1rem;
+	display: inline-block;
+	padding: .5rem;
+	border: 2px solid purple;
+}
+
+/* =================== Airplane and Banner ============================*/
+
+.airplane {
+	font-size: 2.4rem;
+	display: inline-block;
+	font-family: 'Zapf Dingbats';
+	position: relative;
+	transform: translate(0, 9.5px); 
+}
+
+.banner {
+	transform: translate(-390px, 0px);
+	visibility: hidden;
+}
+
+.animation {
+	animation: fly 10s linear .2s 1;
+	animation-fill-mode: forwards;
+	visibility: visible;
+}
+
+@keyframes fly {
+	from{ transform: translate(-390px, 0px); }
+	to{ transform: translate(400px, 0px); }
+}
+
+/* ======================== footer container ==========================*/
+.footer-container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: -40px;
+}
+
+
+/* ========================== Globe ================================*/
+
+.globe {
+	margin: 0 auto;
+	position: relative;
+	transition: transform 200ms linear;
+	transform-style: preserve-3d;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: url('../images/rotatingglobe.png') 0 0 repeat;
+	background-size: 420px;
+	animation-name: rotate;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	box-shadow: inset 16px 0 40px 2px rgba(0,0,0,.85), inset -3px 0 6px 2px rgba(255, 255, 255, 0.2);
+}
+
+.globe:before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.globe:after {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+
+
+@keyframes rotate {
+
+	0% { background-position: 0, 0; }
+	100% { background-position: 630px, 0; }
+
+/* ============================= Footer =================================*/
+
+footer {
+	margin: 0 auto;
+	width: 50%;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
