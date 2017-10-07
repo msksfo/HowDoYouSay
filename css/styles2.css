@@ -1,3 +1,50 @@
+@media all and (min-width: 768px){
+	body {
+		background: url('../images/background-pattern.png');
+	}
+
+	.wrapper {
+		border: 1px solid #ea8d9d;
+		padding: 1rem;
+		margin: 0 auto;
+		width: 50%;
+		border: 1px solid #ea8d9d;
+	}
+
+	.main {
+		margin-bottom: 0;
+	}
+
+	.question {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.answer {
+		width: 60%;
+		margin-bottom: 0;
+	}
+
+	.banner {
+		transform: translate(-292px, 0px);
+	}
+
+	@keyframes fly {
+		from{ transform: translate(-292px, 0px); }
+		to{ transform: translate(290px, 0px); }
+	}
+
+	.footer-container {
+		padding-top: 0;
+		margin: 0 auto;
+		margin-top: -40px;
+		width: 50%;
+	}
+
+}
+ 
+/* =================================================================*/
+
 body, html {
 	min-height: 100vh;
 	box-sizing: border-box;
@@ -8,18 +55,14 @@ body, html {
 	flex-direction: column;
 	justify-content: center;
 	min-height:  100vh;
-	margin: 0 auto;
 	background-color: white;
 }
 
 .main {
-	border 1px solid pink;
 	margin-bottom: 3rem;
 	display: flex;
 	flex-direction: column;
-	justify-content space-around;
 	align-items: center;
-	flex: 1;
 }
 
 .question p, .question h2, .answer h2, .answer p {
@@ -32,7 +75,6 @@ body, html {
 	border: 1px solid blue;
 	border-radius: 20px;
 	width: 100%;
-	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 
@@ -134,60 +176,69 @@ select {
 	to{ transform: translate(400px, 0px); }
 }
 
+/* ======================== footer container ==========================*/
+.footer-container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: -40px;
+}
+
 
 /* ========================== Globe ================================*/
 
 .globe {
-	border 1px solid green;
+	margin: 0 auto;
+	position: relative;
+	transition: transform 200ms linear;
+	transform-style: preserve-3d;
 	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: url('../images/bigglobe.png') 0 0 repeat;
+	background-size: 420px;
+	animation-name: rotate;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	box-shadow: inset 16px 0 40px 2px rgba(0,0,0,.85), inset -3px 0 6px 2px rgba(255, 255, 255, 0.2);
 }
 
-.globe img {
-	display: block;	
-	max-width: 100%;
+.globe:before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
 }
+
+.globe:after {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+
+
+@keyframes rotate {
+
+	0% { background-position: 0, 0; }
+	100% { background-position: 630px, 0; }
 
 /* ============================= Footer =================================*/
 
 footer {
-	border 1px solid green;
 	margin: 0 auto;
 	width: 50%;
 	text-align: center;
 }
 
-
-/* ==================== Media Queries ===============================*/
-
-@media all and (min-width: 768px){
-	body {
-		background: url('../images/background-pattern.png');
-	}
-
-	.wrapper {
-		width: 50%;
-		border: 1px solid #ea8d9d;
-	}
-
-	.question {
-		width: 80%;
-		margin-top: 1rem;
-	}
-
-	.answer {
-		width: 60%;
-	}
-
-	.banner {
-		transform: translate(-292px, 0px);
-	}
-
-	@keyframes fly {
-		from{ transform: translate(-292px, 0px); }
-		to{ transform: translate(290px, 0px); }
-	}
-
-}
 
 
 

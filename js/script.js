@@ -22,7 +22,7 @@ translateButton.addEventListener('click', function(){
 		if (myRequest.status >= 200 && myRequest.status < 400){
 			var myData = JSON.parse(myRequest.responseText);
 			answer.classList.add('fadein');
-			//banner.classList.add('animated');
+			banner.classList.add('animated');
 			resultSpan.innerHTML += myData.text[0];
 		} else {
 			console.log('server error');
@@ -40,9 +40,10 @@ translateButton.addEventListener('click', function(){
 		if (myRequest.status >= 200 && myRequest.status < 400){
 			var myData = JSON.parse(myRequest.responseText);
 			answer.classList.add('fadein');
-			banner.classList.add('animated');
+			banner.classList.add('animation');
 			resultSpan.innerHTML += myData.text[0];
 		} else {
+			document.querySelector('.alert').style.display = 'block';
 			console.log('server error');
 		}
 		
@@ -56,13 +57,15 @@ function resetTextQuery(){
 	resultSpan.innerHTML = '';
 	textquery.value= '';
 	select.selectedIndex = 0;
-	banner.classList.remove('animated');
+	banner.classList.remove('animation');
 	answer.classList.remove('fadein');
+	document.querySelector('.alert').style.display = 'none';
 }
 
 function resetSelect(){
 	resultSpan.innerHTML = '';
-	banner.classList.remove('animated');
+	banner.classList.remove('animation');
+	document.querySelector('.alert').style.display = 'none';
 }
 
 
